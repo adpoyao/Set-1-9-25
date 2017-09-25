@@ -24,3 +24,36 @@ function beyond(num) {
 }
 
 beyond(-0);
+
+function decode(sentence) {
+  const arr = sentence.split(" ")
+  const decoded = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    let word = arr[i];
+    
+    if (word[0] === 'a') {
+      decoded.push(word[1]);
+    }
+
+    else if (word[0] === 'b') {
+      decoded.push(word[2]);
+    }
+
+    else if (word[0] === 'c') {
+      decoded.push(word[3]);
+    }
+
+    else if (word[0] === 'd') {
+      decoded.push(word[4]);
+    }
+
+    else {
+      decoded.push(' ');
+    }
+  }
+
+  return decoded.join("");
+}
+
+decode('craft block argon meter bells brown croon droop');
