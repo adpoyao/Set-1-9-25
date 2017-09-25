@@ -1,3 +1,7 @@
 'use strict'
 
-console.log('Hi, my name is Eddie and I\'m 30 years old');
+function whoAmI() {
+  console.log('Hi, my name is Eddie and I\'m 30 years old');
+}
+
+whoAmI();
