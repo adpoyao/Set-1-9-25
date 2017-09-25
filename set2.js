@@ -91,4 +91,47 @@ function monthCount(month) {
 
 }
 
-monthCount('August');
+//monthCount('August');
+
+function RockPaperScissors(userChoice){
+  var computer = 1 + Math.floor((Math.random()*3));
+  console.log(computer);
+  if (userChoice === 1) {
+    if (computer === 1) {
+      console.log('tie');
+    }
+    else if (computer === 2) {
+      console.log('loose');
+    }
+    else if (computer === 3) {
+      console.log('win');
+    }
+  }
+  
+  else if (userChoice === 2) {
+    if (computer === 1) {
+      console.log('win');
+    }
+    else if (computer === 2) {
+      console.log('tie');
+    }
+    else if (computer === 3) {
+      console.log('loose');
+    }
+  }
+
+  else if (userChoice === 3) {
+    if (computer === 1) {
+      console.log('loose');
+    }
+    else if (computer === 2) {
+      console.log('win');
+    }
+    else if (computer === 3) {
+      console.log('tie');
+    }
+  }
+
+}
+
+RockPaperScissors(2);
