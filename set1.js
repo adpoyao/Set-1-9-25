@@ -8,6 +8,15 @@ function yearOfBirth(age) {
 
 function whoAmI(name, age) {
   let yob = yearOfBirth(age);
+
+  if (name === undefined || age === undefined) {
+    throw new Error('Arguments not valid.')
+  }
+  
+  if (typeof name !== 'string' || typeof age === NaN) {
+    throw new Error('Name must be a string and age must be a number.')
+  }
+  
   if (age < 0) {
     throw new Error('Age cannnot be negative');
   }
@@ -18,7 +27,7 @@ function whoAmI(name, age) {
 }
 
 try {
-  whoAmI('Quang', -5);
+  whoAmI(27, 'Quang');
 }
 catch(e) {
   console.error(e.message);
